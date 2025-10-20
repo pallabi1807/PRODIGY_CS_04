@@ -1,4 +1,4 @@
-# 🧩 Basic Keylogger Program (Tkinter)
+# 🧩 Basic Keylogger Program 
 
 ## 🎯 Aim  
 Create a basic keylogger program that records and logs keystrokes. Focus on logging the keys pressed and saving them to a file.  
@@ -22,7 +22,7 @@ It was developed as a practical task to explore **ethical monitoring tools** and
 
 ## ⚙️ Implementation Details  
 - **UI framework:** `tkinter` (Python standard library) — the app shows a visible window and a text box for typing.  
-- **Log file:** `logs/keloogerlog.txt` (file is created automatically).  
+- **Log file:** `keypress_log` (file is created automatically).  
 - **Timestamping:** All keystrokes are timestamped in UTC (ISO-8601 format).  
 - **Scope:** The keylogger records only while the Tkinter window is focused (no system-wide/global hooks).  
 - **Stop / Control:** The UI shows status and provides buttons to clear the log or open the logs folder.
@@ -31,7 +31,7 @@ It was developed as a practical task to explore **ethical monitoring tools** and
 
 ## 🚀 Features  
 - Real-time keystroke capture while app is focused  
-- Timestamped logging in `logs/keloogerlog.txt`  
+- Timestamped logging in `keypress_log.txt`  
 - Visible UI that indicates logging status (not hidden)  
 - Clean file writes with flushing/fsync to reduce data loss  
 - Cross-platform behavior for opening the logs folder (Windows/macOS/Linux)  
@@ -41,7 +41,7 @@ It was developed as a practical task to explore **ethical monitoring tools** and
 ## 🔄 Algorithm / Logic  
 1. Create the `logs` directory if it does not exist.  
 2. When a key is pressed while the Tkinter window is focused, format an ISO-8601 UTC timestamp and the key info.  
-3. Append the timestamped record to `logs/keloogerlog.txt` (flush + fsync).  
+3. Append the timestamped record to `keypress_log.txt` (flush + fsync).  
 4. Show the last pressed key and timestamp in the UI status bar.  
 5. Provide controls to clear the log file or open the log folder.
 
