@@ -1,0 +1,30 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore virtual environment folders
+venv/
+env/
+.venv/
+
+# Ignore log files and logs directory
+logs/
+*.log
+keypress_log.txt
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE and editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore compiled binaries or temporary files
+*.exe
+*.out
+*.bak
+*.tmp
